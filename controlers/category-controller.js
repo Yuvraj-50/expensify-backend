@@ -1,5 +1,4 @@
 const UserModel = require("../models/userModel");
-
 const destroy = async (req, res) => {
   try {
     const id = req.params.categoryId;
@@ -12,7 +11,7 @@ const destroy = async (req, res) => {
       { $set: { categories: updatedCategories } }
     );
 
-    return res.status(200).json({ user });
+    return res.status(200).json({ message: "category deleted", user });
   } catch (error) {
     return res.status(500).json({ err: error.message });
   }
