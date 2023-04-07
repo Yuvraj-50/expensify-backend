@@ -17,7 +17,7 @@ const categories = [
   { icon: "Default", label: "Default" },
 ];
 
-const signup = async (req, res) => {
+const register = async (req, res) => {
   try {
     const { name, email, password } = req.body;
     const existingUser = await userModel.findOne({ email });
@@ -58,7 +58,7 @@ const signup = async (req, res) => {
   }
 };
 
-const signin = async (req, res) => {
+const login = async (req, res) => {
   try {
     const { email, password } = req.body;
 
@@ -97,4 +97,4 @@ const signin = async (req, res) => {
   }
 };
 
-module.exports = { signup, signin };
+module.exports = { register, login };

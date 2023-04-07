@@ -11,7 +11,7 @@ describe("/post tesing user sign up", () => {
   it("creates a new user", () => {
     chai
       .request(API)
-      .post("/api/v1/user/signup")
+      .post("/api/v1/user/register")
       .send({
         name: "yuvrajsingh",
         email: "auaaaiuita@gmail.com",
@@ -30,7 +30,7 @@ describe("/post testing user sign in", () => {
   it("Login in to user accout", () => {
     chai
       .request(API)
-      .post("/api/v1/user/signin")
+      .post("/api/v1/user/login")
       .send({
         email: "yuvrajsingh2348q@gmail.com",
         password: "YUVRAJsingh123!@#",
